@@ -36,34 +36,34 @@ El proyecto utiliza una base de datos relacional con las siguientes tablas princ
 2.  Importa el archivo `script.sql` (ubicado en la carpeta `/sql`) en tu gestor de base de datos (phpMyAdmin).
 3.  Configura los parámetros de conexión en el archivo `conexion.php`.
 4.  Ejecuta el proyecto desde tu servidor local (`localhost/Proyecto_Concesionario`).
-
+GestionDeAutomoviles_y_Usuarios/screenshots
 
 ### Vista del Panel Inicio Con el rol Admin
-![Panel Admin](screenshots/Panel_inicio_rol_admin.png)
+![Panel Admin](GestionDeAutomoviles_y_Usuarios/screenshots/Panel_inicio_rol_admin.png)
 
 ### Panel de Administración
-![Panel Admin](screenshots/Panel_Administracion.png)
+![Panel Admin](GestionDeAutomoviles_y_Usuarios/screenshots/Panel_Administracion.png)
 
 ### Panel de Gestión de Vehiculos
-![Panel Gestion de Vehiculos](screenshots/Gestion_Vehiculos.png)
+![Panel Gestion de Vehiculos](GestionDeAutomoviles_y_Usuarios/screenshots/Gestion_Vehiculos.png)
 
 ### Panel de Gestión de Empleados
-![Panel Gestor Empleados](screenshots/Gestor_Empleados.png)
+![Panel Gestor Empleados](GestionDeAutomoviles_y_Usuarios/screenshots/Gestor_Empleados.png)
 
 ### Panel del Login
-![Panel Login](screenshots/Login.png)
+![Panel Login](GestionDeAutomoviles_y_Usuarios/screenshots/Login.png)
 
 ### Panel de Gestion de Solicitudes
-![Panel Solicitudes](screenshots/Panel_Solicitudes.png)
+![Panel Solicitudes](GestionDeAutomoviles_y_Usuarios/screenshots/Panel_Solicitudes.png)
 
 ### Vista de Vehiculos Detalles (1)
-![Panel Vistas Vehiculos Detalles](screenshots/Vista_Vehiculo_Detalles(1).png)
+![Panel Vistas Vehiculos Detalles](GestionDeAutomoviles_y_Usuarios/screenshots/Vista_Vehiculo_Detalles(1).png)
 
 ### Vista de Vehiculos con Detalles y Formulario de Solicitud
-![Panel Vehiculo Detalles](Vista_Vehiculo_Detalles_Y_Formulario(2).png)
+![Panel Vehiculo Detalles](GestionDeAutomoviles_y_Usuarios/screenshots/Vista_Vehiculo_Detalles_Y_Formulario(2).png)
 
 ### Vista De Vehiculos
-![Vista Vehiculos](Vista_Vehiculo.png)
+![Vista Vehiculos](GestionDeAutomoviles_y_Usuarios/screenshots/Vista_Vehiculo.png)
 
 ---
 *Desarrollado por Jonh Andrade*
