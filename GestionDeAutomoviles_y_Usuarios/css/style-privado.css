@@ -1,0 +1,271 @@
+/* --- 1. Importación de Fuente y Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --color-admin-bg: #f4f7f6;     /* Fondo gris claro */
+    --color-admin-card: #ffffff;   /* Fondo de las tarjetas (blanco) */
+    --color-admin-dark: #1a2533;  /* Header/Footer (el mismo del index) */
+    --color-admin-text: #333;      /* Texto principal */
+    --color-admin-accent: #007bff; /* Azul de acento */
+    --font-admin: 'Lato', sans-serif;
+}
+
+/* --- 2. Reseteo Global y Estilos Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-admin);
+    background-color: var(--color-admin-bg);
+    color: var(--color-admin-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-admin-accent);
+}
+
+/* --- 3. Header y Footer (Coherente con el público) --- */
+header {
+    background: var(--color-admin-dark);
+    padding: 1.5rem 0; /* Un poco más pequeño que el público */
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .site-title a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+header nav li {
+    color: #aaa;
+    font-weight: 700;
+}
+header nav a {
+    color: var(--color-admin-accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+}
+
+/* --- 4. Técnica "Sticky Footer" --- */
+/* (Para que el footer siempre esté abajo) */
+body.admin-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body.admin-page main {
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+/* --- 5. Contenedor Principal de Admin --- */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.admin-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.admin-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* --- 6. Tarjeta Principal (para panel y formularios) --- */
+.card {
+    background: var(--color-admin-card);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    width: 100%;
+}
+
+.card h2, .card h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- 7. Opciones del Panel (panel_admin.php) --- */
+.admin-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.admin-options a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-admin-accent);
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.admin-options a:hover {
+    background-color: #f0f4f8;
+    color: #0056b3;
+}
+
+/* --- 8. Formularios (register_*.php, editar_*.php) --- */
+form label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+input[type="search"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-admin);
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.2s ease;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: var(--color-admin-accent);
+    outline: none;
+}
+form .btn {
+    margin-top: 1rem;
+}
+
+/* --- 9. Botones --- */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+.btn-primary {
+    background: var(--color-admin-accent);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #0056b3;
+}
+.btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+.btn-secondary:hover {
+    background: #5a6268;
+}
+.btn-danger {
+    background: #dc3545;
+    color: #fff;
+}
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* --- 10. Gestores (gestor_users.php, etc) --- */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.top h2 {
+    margin: 0;
+    border: none;
+}
+form[method="get"] {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+form[method="get"] input {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+/* --- 11. Tablas --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    table-layout: fixed; /* Arregla el problema del texto largo */
+}
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+th {
+    font-weight: 700;
+    color: #777;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+td {
+    word-wrap: break-word; /* Arregla el problema del texto largo */
+    overflow-wrap: break-word;
+}
+td img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+td .btn {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+}

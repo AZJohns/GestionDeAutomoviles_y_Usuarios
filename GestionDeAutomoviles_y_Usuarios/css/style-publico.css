@@ -1,0 +1,347 @@
+/* --- 1. Importación de Fuentes y Reseteo --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0f0f0f;
+    /* Fondo principal oscuro */
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+/* --- 2. Header (Flotante) --- */
+header {
+    position: absolute;
+    /* Flota sobre la imagen Hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .site-title a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header nav li {
+    font-weight: 500;
+}
+
+header nav a.btn {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+header nav a.btn-primary {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+header nav a.btn-secondary {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header nav a.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* --- 3. Sección "Hero" (Pantalla completa) --- */
+.hero {
+    height: 100vh;
+    /* Ocupa el 100% de la altura de la pantalla */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    /* Alinea el texto abajo */
+    justify-content: center;
+
+    /* ¡CAMBIA ESTA IMAGEN! */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Efecto parallax */
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: 8rem;
+    z-index: 10;
+}
+
+.hero-content h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    /* Usamos la fuente elegante solo aquí */
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Botón "Descubrir" del Hero */
+.hero-content .btn {
+    background: #fff;
+    color: #000;
+    padding: 14px 28px;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.hero-content .btn:hover {
+    background: #ddd;
+}
+
+/* --- 4. Sección del Catálogo (Debajo del Hero) --- */
+.catalog-section {
+    padding: 6rem 0;
+    background: #0f0f0f;
+}
+
+.catalog-section h3 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 4rem;
+}
+
+.coches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.card-coche {
+    background: #1a1a1a;
+    /* Tarjeta oscura */
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-coche:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.card-coche img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    filter: brightness(0.9);
+    /* Ligeramente más oscuro */
+    transition: filter 0.3s ease;
+}
+
+.card-coche:hover img {
+    filter: brightness(1);
+}
+
+.card-coche-content {
+    padding: 1.5rem;
+}
+
+.card-coche h4 {
+    font-size: 1.6rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.card-coche p {
+    color: #aaa;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.card-coche .precio {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 1.5rem;
+}
+
+.card-coche .btn-details {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #2a2a2a;
+    color: #aaa;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card-coche .btn-details:hover {
+    background: #c0a16b;
+    /* Un toque de oro/bronce */
+    color: #000;
+}
+
+/* --- 5. Footer (Oscuro) --- */
+footer {
+    background: #000;
+    color: #888;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #2a2a2a;
+}
+
+/* Estilos para la sección de detalles del coche */
+.detalle-hero {
+    height: 70vh;
+    /* Un poco más pequeño que el hero principal */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.detalle-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+}
+
+.detalle-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+
+.detalle-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.detalle-info .precio {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+}
+
+.detalle-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.detalle-info p {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.formulario-interes {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px solid #2a2a2a;
+    position: sticky;
+    /* Se queda fijo al hacer scroll */
+    top: 150px;
+}
+
+.formulario-interes h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.formulario-interes label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.formulario-interes input,
+.formulario-interes textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formulario-interes .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #c0a16b;
+    /* Acento oro/bronce */
+    color: #000;
+    border: none;
+}
+
+.formulario-interes .btn:hover {
+    background: #fff;
+}

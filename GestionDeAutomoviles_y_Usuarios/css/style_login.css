@@ -1,0 +1,216 @@
+/* --- 1. Importación de Fuente y Reseteo Global --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f7f6;
+    /* Un gris muy claro, más suave que el blanco */
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* --- 2. Contenedor Principal --- */
+/* Usaremos esta clase para centrar nuestro contenido */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 3. Header --- */
+header {
+    background: #1a2533;
+    /* Un azul/gris oscuro muy profesional */
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Usamos Flexbox para alinear el título y el botón */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .site-title a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+/* --- 4. Botones --- */
+/* Un estilo de botón reutilizable */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #007bff;
+    /* Azul brillante */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    /* Un azul más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    /* Pequeño efecto de elevación */
+}
+
+/* --- 5. Contenido Principal y Títulos --- */
+main {
+    padding-top: 2.5rem;
+    /* Espacio entre el header y el contenido */
+    height: 100vh;
+    overflow:auto;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1a2533;
+}
+
+.listado-coches h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* --- 6. Tarjetas de Vehículos (La parte más importante) --- */
+.coches-grid {
+    display: grid;
+    /* Mínimo 300px, 1fr (fracción) para que se ajusten */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    /* Espacio entre las tarjetas */
+}
+
+.card-coche {
+    background: #ffffff;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Sombra sutil */
+    overflow: hidden;
+    /* Para que la imagen respete los bordes */
+    display: flex;
+    flex-direction: column;
+    /* Asegura que el botón esté abajo */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-coche:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-coche img {
+    width: 100%;
+    height: 200px;
+    /* Altura fija para todas las imágenes */
+    object-fit: cover;
+    /* Recorta la imagen para que encaje, sin deformarla */
+}
+
+/* Un contenedor para el texto de la tarjeta */
+.card-coche-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    /* Empuja el botón "Ver detalles" hacia abajo */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-coche h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1a2533;
+}
+
+.card-coche p {
+    color: #666;
+    margin-bottom: 0.5rem;
+
+    /* ¡AQUÍ ESTÁ EL ARREGLO PARA TU TEXTO LARGO! */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.card-coche .precio {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-top: 1rem;
+}
+
+/* Empuja el precio (y todo lo anterior) hacia arriba */
+.card-coche-content>*:last-child {
+    margin-top: auto;
+}
+
+/* Estilo del botón "Ver detalles" */
+.card-coche .btn-details {
+    display: block;
+    /* Ocupa todo el ancho */
+    text-align: center;
+    padding: 12px;
+    background: #f0f4f8;
+    color: #1a2533;
+    font-weight: 700;
+    border-radius: 0 0 8px 8px;
+    /* Redondea solo abajo */
+    transition: background 0.2s ease;
+}
+
+.card-coche .btn-details:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+
+/* --- 7. Footer --- */
+footer {
+    background: #222;
+    /* Un gris oscuro, un poco más claro que el header */
+    color: #aaa;
+    /* Color de texto más suave */
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+    position:sticky;
+    /* align-items: end; */
+}
+
+footer p {
+    margin: 0;
+}
