@@ -62,8 +62,7 @@ GestionDeAutomoviles_y_Usuarios/screenshots
 ### Vista de Vehiculos con Detalles y Formulario de Solicitud
 ![Panel Vehiculo Detalles](GestionDeAutomoviles_y_Usuarios/screenshots/Vista_Vehiculo_Detalles_Y_Formulario(2).png)
 
-### Vista De Vehiculos
-![Vista Vehiculos](GestionDeAutomoviles_y_Usuarios/screenshots/Vista_Vehiculo.png)
+
 
 ---
 *Desarrollado por Jonh Andrade*
